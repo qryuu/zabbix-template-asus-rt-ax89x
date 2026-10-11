@@ -1,0 +1,20 @@
+<svg width="99.7" height="20" viewBox="0 0 997 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Zabbix: 7.0 LTS">
+  <title>Zabbix: 7.0 LTS</title>
+  <linearGradient id="EvUXy" x2="0" y2="100%">
+    <stop offset="0" stop-opacity=".1" stop-color="#EEE"/>
+    <stop offset="1" stop-opacity=".1"/>
+  </linearGradient>
+  <mask id="moTMu"><rect width="997" height="200" rx="30" fill="#FFF"/></mask>
+  <g mask="url(#moTMu)">
+    <rect width="474" height="200" fill="#555"/>
+    <rect width="523" height="200" fill="#E43" x="474"/>
+    <rect width="997" height="200" fill="url(#EvUXy)"/>
+  </g>
+  <g aria-hidden="true" text-anchor="start" font-family="Verdana,DejaVu Sans,sans-serif" font-size="110">
+    <text x="60" y="148" textLength="374" fill="#000" opacity="0.25">Zabbix</text>
+    <text x="50" y="138" textLength="374" fill="#fff">Zabbix</text>
+    <text x="529" y="148" textLength="423" fill="#000" opacity="0.25">7.0 LTS</text>
+    <text x="519" y="138" textLength="423" fill="#fff">7.0 LTS</text>
+  </g>
+  
+</svg>
