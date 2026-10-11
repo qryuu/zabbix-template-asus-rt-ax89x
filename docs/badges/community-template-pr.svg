@@ -1,0 +1,20 @@
+<svg width="229.3" height="20" viewBox="0 0 2293 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Zabbix Community Template: PR #865">
+  <title>Zabbix Community Template: PR #865</title>
+  <linearGradient id="rBTan" x2="0" y2="100%">
+    <stop offset="0" stop-opacity=".1" stop-color="#EEE"/>
+    <stop offset="1" stop-opacity=".1"/>
+  </linearGradient>
+  <mask id="Adlpe"><rect width="2293" height="200" rx="30" fill="#FFF"/></mask>
+  <g mask="url(#Adlpe)">
+    <rect width="1712" height="200" fill="#555"/>
+    <rect width="581" height="200" fill="#F73" x="1712"/>
+    <rect width="2293" height="200" fill="url(#rBTan)"/>
+  </g>
+  <g aria-hidden="true" text-anchor="start" font-family="Verdana,DejaVu Sans,sans-serif" font-size="110">
+    <text x="60" y="148" textLength="1612" fill="#000" opacity="0.25">Zabbix Community Template</text>
+    <text x="50" y="138" textLength="1612" fill="#fff">Zabbix Community Template</text>
+    <text x="1767" y="148" textLength="481" fill="#000" opacity="0.25">PR #865</text>
+    <text x="1757" y="138" textLength="481" fill="#fff">PR #865</text>
+  </g>
+  
+</svg>

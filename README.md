@@ -3,12 +3,17 @@
 <div align="right">
 
 [![License: MIT](./docs/badges/license-mit.svg)](./LICENSE)
+[![Zabbix Community Template PR](./docs/badges/community-template-pr.svg)](https://github.com/zabbix/community-templates/pull/865)
 [![Zabbix: 7.0 LTS](./docs/badges/zabbix-7.0-lts.svg)](https://www.zabbix.com/)
 [![Target: ASUS RT-AX89X](./docs/badges/target-asus-rt-ax89x.svg)](https://www.asus.com/networking-iot-servers/wifi-routers/asus-wifi-routers/rt-ax89x/)
 [![日本語](./docs/badges/language-ja.svg)](#)
 [![English](./docs/badges/language-en.svg)](./README_EN.md)
 
 </div>
+
+> [!NOTE]
+> **🏛️ Zabbix 公式コミュニティテンプレート申請中**:  
+> 本リポジトリのテンプレート一式（英語版・日本語版）は、Zabbix 公式コミュニティテンプレートリポジトリ（[zabbix/community-templates#865](https://github.com/zabbix/community-templates/pull/865)）へ寄稿・申請中です。
 
 ASUS のフラグシップ Wi-Fi 6 ルーター「**RT-AX89X**」（Qualcomm IPQ8074 Hawkeye SoC）を、Zabbix 7.0 LTS 環境で安全・軽量・高精度に監視するための決定版 **All-in-One テンプレート** です。
 
