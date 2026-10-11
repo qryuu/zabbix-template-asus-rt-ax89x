@@ -1,0 +1,20 @@
+<svg width="146.3" height="20" viewBox="0 0 1463 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Target: ASUS RT-AX89X">
+  <title>Target: ASUS RT-AX89X</title>
+  <linearGradient id="cUFvU" x2="0" y2="100%">
+    <stop offset="0" stop-opacity=".1" stop-color="#EEE"/>
+    <stop offset="1" stop-opacity=".1"/>
+  </linearGradient>
+  <mask id="gxyAt"><rect width="1463" height="200" rx="30" fill="#FFF"/></mask>
+  <g mask="url(#gxyAt)">
+    <rect width="459" height="200" fill="#555"/>
+    <rect width="1004" height="200" fill="#08C" x="459"/>
+    <rect width="1463" height="200" fill="url(#cUFvU)"/>
+  </g>
+  <g aria-hidden="true" text-anchor="start" font-family="Verdana,DejaVu Sans,sans-serif" font-size="110">
+    <text x="60" y="148" textLength="359" fill="#000" opacity="0.25">Target</text>
+    <text x="50" y="138" textLength="359" fill="#fff">Target</text>
+    <text x="514" y="148" textLength="904" fill="#000" opacity="0.25">ASUS RT-AX89X</text>
+    <text x="504" y="138" textLength="904" fill="#fff">ASUS RT-AX89X</text>
+  </g>
+  
+</svg>
