@@ -3,8 +3,8 @@
 <div align="right">
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
-[![Zabbix: 7.0 LTS](https://img.shields.io/badge/Zabbix-7.0%20LTS-red.svg)](https://www.zabbix.com/)
-[![Target: ASUS RT-AX89X](https://img.shields.io/badge/Target-ASUS%20RT--AX89X-blue.svg)](https://www.asus.com/networking-iot-servers/wifi-routers/asus-wifi-routers/rt-ax89x/)
+[![Zabbix: 7.0 LTS](https://img.shields.io/badge/Zabbix-7.0_LTS-red.svg)](https://www.zabbix.com/)
+[![Target: ASUS RT-AX89X](https://img.shields.io/badge/Target-ASUS_RT--AX89X-blue.svg)](https://www.asus.com/networking-iot-servers/wifi-routers/asus-wifi-routers/rt-ax89x/)
 [![日本語](https://img.shields.io/badge/Language-%E6%97%A5%E6%9C%AC%E8%AA%9E-blue.svg)](#)
 [![English](https://img.shields.io/badge/Language-English-lightgrey.svg)](./README_EN.md)
 
