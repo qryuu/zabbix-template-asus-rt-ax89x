@@ -12,16 +12,15 @@
 
 A high-performance, lightweight, and comprehensive **All-in-One Zabbix 7.0 LTS monitoring template** designed specifically for the **ASUS RT-AX89X** flagship Wi-Fi 6 router (powered by the Qualcomm IPQ8074 Hawkeye SoC).
 
-By consolidating all metrics into a **single SSH Master Item**, this template cuts router CPU and SSH session load by **90%**, eliminating the router freezing or hanging issues commonly caused by frequent SSH polling. It includes a built-in **3-tab modern template dashboard** providing out-of-the-box visibility into system telemetry, Wi-Fi 6 RF health, and 15 independent thermal zones.
+By consolidating all metrics into a **single SSH Master Item**, this template minimizes router resource consumption and eliminates potential instability caused by frequent polling. It includes a built-in **3-tab modern template dashboard** providing out-of-the-box visibility into system telemetry, Wi-Fi 6 RF health, and 15 independent thermal zones.
 
 ---
 
 ## 🚀 Key Features
 
-1. **90% Load Reduction via Single SSH Master Item**:
-   - Completely replaces legacy setups that execute separate SSH commands up to 19 times per minute.
-   - Executes a single, lightweight compound command every 30 seconds (`top`, `uptime`, `loadavg`, `ping`, thermal zones, `iwconfig`, `wlanconfig`), returning structured JSON that is parsed into Dependent Items.
-   - Minimizes fork/process overhead in embedded Linux (Dropbear SSH) to ensure zero impact on router performance.
+1. **High-Efficiency Data Collection via Single SSH Master Item**:
+   - Executes a single compound command every 30 seconds (`top`, `uptime`, `loadavg`, `ping`, thermal zones, `iwconfig`, `wlanconfig`), returning structured JSON that is parsed into Dependent Items.
+   - Minimizes session establishment and fork/process overhead in embedded Linux (Dropbear SSH) to ensure minimal impact on router performance.
 2. **Wi-Fi 6 (Qualcomm QCA) RF Quality Telemetry**:
    - Accurately tracks connected client counts (UINT64) separated by 2.4 GHz and 5 GHz bands.
    - Collects average/minimum RSSI (signal strength), average SNR (signal-to-noise ratio), and noise floor for actionable RF troubleshooting.
