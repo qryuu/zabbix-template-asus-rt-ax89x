@@ -49,9 +49,11 @@ By consolidating all metrics into a **single SSH Master Item**, this template mi
 
 ## 🛠️ Installation Guide
 
-1. Download [`template/ASUS-Router.yaml`](./template/ASUS-Router.yaml) from this repository.
+1. Download the template YAML matching your environment:
+   - **English (Recommended)**: [`template/template_asus_rt_ax89x_en.yaml`](./template/template_asus_rt_ax89x_en.yaml)
+   - **Japanese**: [`template/template_asus_rt_ax89x_ja.yaml`](./template/template_asus_rt_ax89x_ja.yaml)
 2. Open your Zabbix Web UI and navigate to **Data collection -> Templates**.
-3. Click **Import** in the top right corner and import `ASUS-Router.yaml`.
+3. Click **Import** in the top right corner and import the downloaded YAML file.
 4. Navigate to **Data collection -> Hosts** and create a host for your router (or select an existing one):
    - **Template**: Link `ASUS-Router`.
    - **Interfaces**: Add your router's IP address (e.g., `192.168.1.1`) as an Agent or SNMP interface.
@@ -98,14 +100,18 @@ Once linked, open the host dashboard from **Monitoring -> Hosts -> Dashboards**:
 
 ```text
 zabbix-template-asus-rt-ax89x/
-├── README.md               # Japanese documentation
-├── README_EN.md            # English documentation
-├── LICENSE                 # MIT License
+├── README.md                           # Japanese documentation
+├── README_EN.md                        # English documentation
+├── LICENSE                             # MIT License
+├── AGENTS.md                           # Guide for AI assistants
 ├── template/
-│   └── ASUS-Router.yaml    # Zabbix 7.0 template definition (YAML)
+│   ├── template_asus_rt_ax89x_en.yaml  # English template definition (YAML)
+│   ├── template_asus_rt_ax89x_ja.yaml  # Japanese template definition (YAML)
+│   └── ASUS-Router.yaml                # Compatibility template
 ├── docs/
-│   └── images/             # Dashboard screenshots & diagrams
-└── tools/                  # Utility scripts
+│   ├── badges/                         # SVG badge assets
+│   └── images/                         # Dashboard screenshots & diagrams
+└── tools/                              # Utility scripts
 ```
 
 ---

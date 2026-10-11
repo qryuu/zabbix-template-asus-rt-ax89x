@@ -49,9 +49,11 @@ ASUS のフラグシップ Wi-Fi 6 ルーター「**RT-AX89X**」（Qualcomm IPQ
 
 ## 🛠️ インポート手順
 
-1. 本リポジトリの [`template/ASUS-Router.yaml`](./template/ASUS-Router.yaml) をダウンロードします。
+1. ご利用の環境（言語）に合わせてテンプレートYAMLをダウンロードします：
+   - **日本語版（推奨）**: [`template/template_asus_rt_ax89x_ja.yaml`](./template/template_asus_rt_ax89x_ja.yaml)
+   - **英語版**: [`template/template_asus_rt_ax89x_en.yaml`](./template/template_asus_rt_ax89x_en.yaml)
 2. Zabbix Web UI にログインし、**「データ収集」→「テンプレート」** を開きます。
-3. 画面右上の **「インポート」** ボタンを押し、ダウンロードした `ASUS-Router.yaml` を選択してインポートします。
+3. 画面右上の **「インポート」** ボタンを押し、ダウンロードした YAML ファイルを選択してインポートします。
 4. **「データ収集」→「ホスト」** でルーターのホストを作成（または既存のホストを選択）します。
    - **テンプレート**: `ASUS-Router` をリンク
    - **インターフェース**: ルーターのIPアドレス（例: `192.168.1.1`）を設定（エージェントまたはSNMPインターフェース）
@@ -98,14 +100,18 @@ ASUS のフラグシップ Wi-Fi 6 ルーター「**RT-AX89X**」（Qualcomm IPQ
 
 ```text
 zabbix-template-asus-rt-ax89x/
-├── README.md               # プロジェクト説明書 (日本語)
-├── README_EN.md            # プロジェクト説明書 (English)
-├── LICENSE                 # MIT License
+├── README.md                           # プロジェクト説明書 (日本語)
+├── README_EN.md                        # プロジェクト説明書 (English)
+├── LICENSE                             # MIT License
+├── AGENTS.md                           # AI アシスタント向けガイド
 ├── template/
-│   └── ASUS-Router.yaml    # Zabbix 7.0 テンプレート本体 (YAML)
+│   ├── template_asus_rt_ax89x_ja.yaml  # 日本語版テンプレート (YAML)
+│   ├── template_asus_rt_ax89x_en.yaml  # 英語版テンプレート (YAML)
+│   └── ASUS-Router.yaml                # 互換用テンプレート
 ├── docs/
-│   └── images/             # ダッシュボードスクリーンショット等
-└── tools/                  # 補助スクリプト (必要に応じて)
+│   ├── badges/                         # バッジ用 SVG アセット
+│   └── images/                         # ダッシュボードスクリーンショット等
+└── tools/                              # 補助スクリプト (必要に応じて)
 ```
 
 ---
