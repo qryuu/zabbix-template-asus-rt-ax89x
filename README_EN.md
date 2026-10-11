@@ -3,12 +3,17 @@
 <div align="right">
 
 [![License: MIT](./docs/badges/license-mit.svg)](./LICENSE)
+[![Zabbix Community Template PR](./docs/badges/community-template-pr.svg)](https://github.com/zabbix/community-templates/pull/865)
 [![Zabbix: 7.0 LTS](./docs/badges/zabbix-7.0-lts.svg)](https://www.zabbix.com/)
 [![Target: ASUS RT-AX89X](./docs/badges/target-asus-rt-ax89x.svg)](https://www.asus.com/networking-iot-servers/wifi-routers/asus-wifi-routers/rt-ax89x/)
 [![日本語](./docs/badges/language-ja.svg)](./README.md)
 [![English](./docs/badges/language-en.svg)](#)
 
 </div>
+
+> [!NOTE]
+> **🏛️ Zabbix Official Community Template Submission**:  
+> Both English and Japanese templates from this repository have been submitted to the official Zabbix Community Templates repository ([zabbix/community-templates#865](https://github.com/zabbix/community-templates/pull/865)).
 
 A high-performance, lightweight, and comprehensive **All-in-One Zabbix 7.0 LTS monitoring template** designed specifically for the **ASUS RT-AX89X** flagship Wi-Fi 6 router (powered by the Qualcomm IPQ8074 Hawkeye SoC).
 
