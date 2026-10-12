@@ -95,11 +95,12 @@ Once linked, open the host dashboard from **Monitoring -> Hosts -> Dashboards**:
 - **Memory History**: Historical memory consumption waveform.
 
 ### Tab 2: Wi-Fi Quality
-- **Client Cards**: Real-time connected station count (Total, 5 GHz, 2.4 GHz).
-- **RF Metric Cards**: 5 GHz average RSSI and SNR cards with color-coded thresholds.
+- **Client Cards**: Real-time connected station count (Total, 5 GHz, 2.4 GHz) with threshold colors.
+- **RF Metric Cards**: 4 dedicated cards for average RSSI and SNR (both 5 GHz and 2.4 GHz) with health thresholds.
 - **Client Count Trends**: Staircase line chart showing station connection history (Total, 5 GHz, 2.4 GHz).
-- **RF Quality Trends**: 5 GHz average RSSI, minimum RSSI, and average SNR waveforms.  
-  *(Note: 2.4 GHz RF metrics and noise floor items are also collected and available for custom dashboards).*
+- **5 GHz RF Quality Trends**: Real-time waveforms for 5 GHz average RSSI, minimum RSSI, and SNR.
+- **2.4 GHz RF Quality Trends**: Real-time waveforms for 2.4 GHz average RSSI, minimum RSSI, and SNR (ideal for IoT/smart-home troubleshooting).
+- **Noise Floor Trends**: Comparative noise floor waveforms (5 GHz vs. 2.4 GHz) for RF interference detection.
 
 ### Tab 3: Thermal Zones
 - **15-Zone Grid**: Real-time temperature curves for all 15 onboard thermal sensors.
