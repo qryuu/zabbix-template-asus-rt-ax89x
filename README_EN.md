@@ -68,15 +68,18 @@ By consolidating all metrics into a **single SSH Master Item**, this template mi
 
 ## ⚙️ User Macros
 
-| Macro | Default | Type | Description |
-| :--- | :--- | :--- | :--- |
-| `{$SSH_USER}` | `admin` | Text | SSH login username for the router |
-| `{$SSH_PASS}` | (empty) | Secret text | SSH login password for the router |
-| `{$SSH_PORT}` | `22` | Text | SSH port number |
-| `{$CPU_UTIL_WARN}` | `80` | Text | CPU utilization warning threshold (%) |
-| `{$CPU_UTIL_CRIT}` | `90` | Text | CPU utilization high threshold (%) |
-| `{$TEMP_WARN}` | `80` | Text | Thermal zone temperature warning threshold (°C) |
-| `{$PING_TIME_WARN}` | `50ms` | Text | Internet connectivity ping latency warning threshold |
+Configure the following user macros in your host configuration:
+
+| Macro | Default | Type | Required | Description |
+| :--- | :--- | :--- | :---: | :--- |
+| `{$SSH_USER}` | (empty) | Text | **Yes** | SSH login username for the router |
+| `{$SSH_PASS}` | (empty) | **Secret text** | **Yes** | SSH login password for the router |
+| `{$AX89X.TEMP.WARN}` | `80` | Text | Optional | Thermal zone temperature warning threshold (°C) |
+
+> [!WARNING]
+> **Important Security Notice**:
+> 1. **Allow SSH from LAN only**: In Asuswrt, the SSH account is identical to the router's web administration account (root privileges). Never enable "Allow SSH access from WAN" under **Administration -> System -> SSH Daemon** (keep SSH accessible from LAN only).
+> 2. **Use Secret Text**: Always configure `{$SSH_PASS}` as **Secret text** in the Zabbix Web UI to prevent password exposure.
 
 ---
 
@@ -87,14 +90,16 @@ Once linked, open the host dashboard from **Monitoring -> Hosts -> Dashboards**:
 ### Tab 1: System Overview
 - **CPU Gauge**: Real-time total CPU utilization gauge.
 - **Memory Doughnut**: Physical memory distribution (Used / Cached / Buffers / Free).
-- **Internet Ping**: Latency and packet loss to Google DNS (`8.8.8.8`).
+- **Internet Ping**: Latency and packet loss to Google (`google.com`) including DNS resolution.
 - **CPU Breakdown**: Stacked metrics for user, system, idle, iowait, irq, and sirq.
 - **Memory History**: Historical memory consumption waveform.
 
 ### Tab 2: Wi-Fi Quality
 - **Client Cards**: Real-time connected station count (Total, 5 GHz, 2.4 GHz).
-- **Client Count Trends**: Staircase line chart showing station connection history.
-- **RF Quality Trends**: Average RSSI, minimum RSSI, SNR, and noise floor.
+- **RF Metric Cards**: 5 GHz average RSSI and SNR cards with color-coded thresholds.
+- **Client Count Trends**: Staircase line chart showing station connection history (Total, 5 GHz, 2.4 GHz).
+- **RF Quality Trends**: 5 GHz average RSSI, minimum RSSI, and average SNR waveforms.  
+  *(Note: 2.4 GHz RF metrics and noise floor items are also collected and available for custom dashboards).*
 
 ### Tab 3: Thermal Zones
 - **15-Zone Grid**: Real-time temperature curves for all 15 onboard thermal sensors.
