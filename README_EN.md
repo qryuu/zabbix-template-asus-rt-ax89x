@@ -38,7 +38,7 @@ By consolidating all metrics into a **single SSH Master Item**, this template mi
      - **Tab 2: Wi-Fi Quality**: Connected client cards, staircase client count trends, and 5 GHz / 2.4 GHz RF metrics.
      - **Tab 3: Thermal Zones**: Comprehensive grid view displaying waveforms for all 15 thermal sensors.
 5. **Modern Visualizations**:
-   - Uses **staircase drawtype (`ds.type: 2`)** for client counts to clearly indicate device connection/disconnection events.
+   - Uses **staircase draw style (`ds.type: 2`)** for client counts to clearly indicate device connection/disconnection events.
    - Optimized graph prototype widgets displaying all 15 thermal sensors in a clean, legible grid layout.
 
 ---
@@ -100,7 +100,7 @@ Once linked, open the host dashboard from **Monitoring -> Hosts -> Dashboards**:
 - **Client Count Trends**: Staircase line chart showing station connection history (Total, 5 GHz, 2.4 GHz).
 - **5 GHz RF Quality Trends**: Real-time waveforms for 5 GHz average RSSI, minimum RSSI, and SNR.
 - **2.4 GHz RF Quality Trends**: Real-time waveforms for 2.4 GHz average RSSI, minimum RSSI, and SNR (ideal for IoT/smart-home troubleshooting).
-- **Noise Floor Trends**: Comparative noise floor waveforms (5 GHz vs. 2.4 GHz) (note: driver outputs static values on certain firmware revisions).
+- **Noise Floor Trends (Reference)**: Comparative noise floor waveforms (5 GHz vs. 2.4 GHz) (note: driver outputs static values on certain firmware revisions).
 
 ### Tab 3: Thermal Zones
 - **15-Zone Grid**: Real-time temperature curves for all 15 onboard thermal sensors.
