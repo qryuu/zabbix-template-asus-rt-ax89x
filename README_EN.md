@@ -24,13 +24,13 @@ By consolidating all metrics into a **single SSH Master Item**, this template mi
 ## 🚀 Key Features
 
 1. **High-Efficiency Data Collection via Single SSH Master Item**:
-   - Executes a single compound command every 30 seconds (`top`, `uptime`, `loadavg`, `ping`, thermal zones, `iwconfig`, `wlanconfig`), returning structured JSON that is parsed into Dependent Items.
+   - Executes a single compound command every 30 seconds (`top`, `uptime`, `loadavg`, `ping`, thermal zones, `iwconfig`, `wlanconfig`), returning delimited raw text that is parsed into Dependent Items via Zabbix Regex and JavaScript preprocessing.
    - Minimizes session establishment and fork/process overhead in embedded Linux (Dropbear SSH) to ensure minimal impact on router performance.
 2. **Wi-Fi 6 (Qualcomm QCA) RF Quality Telemetry**:
    - Accurately tracks connected client counts (UINT64) separated by 2.4 GHz and 5 GHz bands.
-   - Collects average/minimum RSSI (signal strength), average SNR (signal-to-noise ratio), and noise floor for actionable RF troubleshooting.
+   - Collects average/minimum RSSI (signal strength), average SNR (signal-to-noise ratio), and noise floor telemetry (note: noise floor may report static driver values on certain firmware revisions).
 3. **Autonomous Low-Level Discovery (LLD) for All 15 Thermal Zones**:
-   - Auto-discovers all 15 hardware thermal sensors on the IPQ8074 platform: CPU (4 cores), NSS (2 cores), NSS Top, SoC system blocks, chipsets, internal bus, and wireless power amplifiers (PA).
+   - Auto-discovers all 15 hardware thermal sensors on the IPQ8074 platform via LLD (sensor names mapped from underlying sysfs types as provisional labels).
    - Dynamically tracks temperature trends with individual threshold alerts.
 4. **Zabbix 7.0 Native 3-Tab Template Dashboard**:
    - Ready to use immediately upon linking—no tedious dashboard editing required:
@@ -38,8 +38,8 @@ By consolidating all metrics into a **single SSH Master Item**, this template mi
      - **Tab 2: Wi-Fi Quality**: Connected client cards, staircase client count trends, and 5 GHz / 2.4 GHz RF metrics.
      - **Tab 3: Thermal Zones**: Comprehensive grid view displaying waveforms for all 15 thermal sensors.
 5. **Modern Visualizations**:
-   - Uses **staircase drawtype** for client counts to clearly indicate device connection/disconnection events.
-   - Fully compliant with Zabbix 7.0 dashboard iterator specs (`reference: TEMPS`) for synchronized time periods, with cluttered legends removed to maximize waveform display areas.
+   - Uses **staircase drawtype (`ds.type: 2`)** for client counts to clearly indicate device connection/disconnection events.
+   - Optimized graph prototype widgets displaying all 15 thermal sensors in a clean, legible grid layout.
 
 ---
 
@@ -100,7 +100,7 @@ Once linked, open the host dashboard from **Monitoring -> Hosts -> Dashboards**:
 - **Client Count Trends**: Staircase line chart showing station connection history (Total, 5 GHz, 2.4 GHz).
 - **5 GHz RF Quality Trends**: Real-time waveforms for 5 GHz average RSSI, minimum RSSI, and SNR.
 - **2.4 GHz RF Quality Trends**: Real-time waveforms for 2.4 GHz average RSSI, minimum RSSI, and SNR (ideal for IoT/smart-home troubleshooting).
-- **Noise Floor Trends**: Comparative noise floor waveforms (5 GHz vs. 2.4 GHz) for RF interference detection.
+- **Noise Floor Trends**: Comparative noise floor waveforms (5 GHz vs. 2.4 GHz) (note: driver outputs static values on certain firmware revisions).
 
 ### Tab 3: Thermal Zones
 - **15-Zone Grid**: Real-time temperature curves for all 15 onboard thermal sensors.
