@@ -8,9 +8,9 @@ This repository provides an All-in-One Zabbix 7.0 monitoring template for the AS
 - **Zabbix Version Target**: 7.0 LTS+
 - **Master Item**: `ssh.run[router_master]` (Delay: 30s)
   - Executes a single compound bash pipeline on the router via Dropbear SSH.
-  - Returns a compact JSON payload containing CPU, memory, uptime, ping, thermal sensors, and Wi-Fi interface statuses.
+  - Returns delimited raw text (`===TOP===`, `===THERMAL===`, etc.) containing CPU, memory, uptime, ping, thermal sensors, and Wi-Fi interface statuses.
 - **Dependent Items**:
-  - Parsed using JSONPath and Regex preprocessing from `ssh.run[router_master]`.
+  - Parsed using Regex and JavaScript preprocessing from `ssh.run[router_master]`.
 - **Low-Level Discovery (LLD)**:
   - Thermal zones (15 hardware sensors on Qualcomm IPQ8074) discovered dynamically.
 - **Built-in Dashboards**:
@@ -20,5 +20,5 @@ This repository provides an All-in-One Zabbix 7.0 monitoring template for the AS
 
 When a user asks to verify or work with this repository:
 1. Ensure `template/ASUS-Router.yaml` is valid YAML.
-2. Verify all dependent item keys align with the master item JSON output schema.
+2. Verify all dependent item preprocessing rules align with the master item text sections and output format.
 3. Keep dashboard widget coordinates within standard Zabbix 7.0 limits (width up to 72, height appropriately sized).
